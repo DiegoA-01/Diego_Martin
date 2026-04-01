@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    box-sizing:  border-box;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/src/assets/deportes.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    background-color: gray;
+    margin: -10px;
+}
+
+a {
+    color: red;
+    
+    text-decoration: none;
+    margin: 6px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.nav_item{
+    font-size: larger;
+    
+}
+
+a:hover {
+   background-color: gray; 
+}
+
+.class {
+    margin-right: 950px;
+}
+
+.caja1 {
+    display: flex;
+}
+
+.caja2 {
+    display: flex;
+    margin-right: 30px;
+}
+
+
+

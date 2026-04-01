@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: white;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+.caja1, .caja2{
+    display: flex;
+    gap: 25px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: red;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.productos {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.productos h1{
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.card img {
+    width: 100%;
+    height: 270px;
+    
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    color: #ccc;
+}
+
+/*EL BOTON*/
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: darkred;
+}
+
