@@ -11,21 +11,18 @@ body {
 }
 
 nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 50px;
-    backdrop-filter: blur(10px);
-    background: rgba(0,0,0,0.4);
-    z-index: 1000;
+    background: #000;
 }
 
-.caja1, .caja2{
-    display: flex;
+.menu.acciones{
+     display: flex;
     gap: 25px;
 }
+
 
 a {
     color:white;
@@ -39,17 +36,44 @@ a {
 a:hover {
    background-color: gray; 
 }
-.caja2:hover {
-    transform: scale(1.05);
+
+.logo a {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
 }
 
-.btn-primary:hover {
-    background: darkred;
-    transform: scale(1.05);
+.menu {
+    display: flex;
+    gap: 30px;
 }
-a {
+
+
+.menu a {
     color: white;
     text-decoration: none;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: red;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.acciones {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .btn-primary {
@@ -58,14 +82,17 @@ a {
     border-radius: 20px;
 }
 
+.carrito {
+    font-size: 20px;
+}
+
 .productos {
-    padding: 80px 50px;
+    padding: 50px;
     text-align: center;
 }
 
-.productos h1{
-    margin-bottom: 40px;
-    font-size: 40px;
+.productos h1 {
+    margin-bottom: 30px;
 }
 
 .grid {
@@ -90,21 +117,13 @@ a {
     height: 270px;
     
     border-radius: 10px;
+
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.03);
+    transform: scale(1.05);
 }
 
-.card h3 {
-    margin: 10px 0;
-}
-
-.card p {
-    color: #ccc;
-}
-
-/*EL BOTON*/
 .card button {
     margin-top: 10px;
     padding: 10px;
@@ -114,10 +133,4 @@ a {
     color: white;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
 }
-
-.card button:hover {
-    background: darkred;
-}
-
