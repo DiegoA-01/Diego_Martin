@@ -137,3 +137,120 @@ a:hover {
 .card button:hover {
     background: darkred;
 }
+
+.carrito-container .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+}
+
+/* Contenedor donde tengo los botones de carrito */
+.carrito-acciones {
+    display: flex;
+    justify-content: center;   
+    gap: 20px;                 
+    margin: 30px 0;            
+}
+
+/* Estilo general de botones de carrito */
+.btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Diseño para el Botón vaciar el carrito */
+.btn.vaciar {
+    background-color: #f44336; 
+    color: white;
+}
+
+.btn.vaciar:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* Diseño para el Botón pagar */
+.btn.pagar {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.btn.pagar:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+/*mensaje para cuando esta vacio*/
+.mensaje-vacio {
+    text-align: center;
+    padding: 50px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.mensaje-vacio img {
+    width: 150px;
+    opacity: 0.7;
+}
+
+.mensaje-vacio h2 {
+    font-size: 28px;
+    color: #f44336;
+}
+
+.mensaje-vacio p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.mensaje-vacio .volver-tienda {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.mensaje-vacio .volver-tienda:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s, transform 0.5s;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}

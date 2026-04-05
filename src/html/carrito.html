@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/src/css/tienda.css">
+    <title>Carrito</title>
+</head>
+<body>
+    <nav>
+    <div class="logo">
+        <a href="tienda.html">Volver a la tienda</a>
+    </div>
+
+    <div class="menu">
+        <a href="#">Camisetas</a>
+        <a href="#">Guayos</a>
+        <a href="#">Buzos</a>
+        <a href="#">Pantalonetas</a>
+    </div>
+
+    <div class="acciones">
+        <a href="carrito.html" class="carrito">Carrito 🛒</a>
+    </div>
+</nav>
+
+    <h1>🛒 Mi Carrito</h1>
+    <section class="carrito-container">
+        <div id="carrito" class="grid"></div>
+        <div id="mensaje-vacio" class="mensaje-vacio" style="display: none;">
+        
+        <h2>Tu carrito está vacío 😔</h2>
+        <p>Agrega productos para comenzar a comprar.</p>
+        <a href="tienda.html" class="btn volver-tienda">Volver a la tienda</a>
+        </div>
+    </section>
+    <h2 id="total"></h2>
+
+    <button class="btn vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
+    <button class="btn pagar" onclick="pagar()">Pagar</button>
+
+    <script src="/src/js/mostrarcarrito.js"></script>
+
+</body>
+</html>
