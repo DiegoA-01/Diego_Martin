@@ -11,17 +11,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 imagen: boton.dataset.imagen
             };
 
-            // Obtener carrito actual
+            
             let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-            // Agregar producto
+            
             carrito.push(producto);
 
-            // Guardar en localStorage
+            
             localStorage.setItem("carrito", JSON.stringify(carrito));
 
-            alert("Producto agregado al carrito 🛒");
+            mostrarToast(`${producto.nombre} agregado al carrito 🛒`);
+            
         });
     });
 
 });
+
+function mostrarToast(mensaje, color = "#4CAF50") {
+    const toast = document.getElementById("toast");
+    if (!toast) return; 
+
+    toast.textContent = mensaje;
+    toast.style.backgroundColor = color;
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 1500); 
+}
