@@ -8,6 +8,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: #111;
     color: white;
+    background-image: url(/src/assets/deportes.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 nav {
@@ -15,7 +18,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background: #000;
+    background: #121212;
+    border: 2px solid #917f7f  ;
+    border-radius: 10px;
 }
 
 .menu.acciones{
