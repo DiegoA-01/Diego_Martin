@@ -41,7 +41,10 @@ nav {
     backdrop-filter: blur(10px);
     background: rgba(0,0,0,0.4);
     z-index: 1000;
+    border: 2px solid #917f7f  ;
+    border-radius: 10px;
 }
+
 
 .caja1, .caja2{
     display: flex;
