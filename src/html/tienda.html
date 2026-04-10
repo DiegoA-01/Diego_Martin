@@ -80,7 +80,16 @@
                     Agregar</button>
             </div>
 
-            <div id ="toast" class="toast"></div>
+        <div id="ai-recommendations" style="margin-top: 20px;">
+            <h2>Recomendaciones con IA 🤖</h2>
+            <input type="text" id="user-query" placeholder="Describe lo que buscas (ej: algo para regalar a mi mamá)">
+            <button id="get-recommendations">Obtener Recomendaciones</button>
+            <div id="loading" style="display:none;">Cargando recomendaciones...</div>
+            <div id="error" style="display:none; color: red;">Error al obtener recomendaciones. Verifica tu API key.</div>
+            <div id="results" class="grid"></div>
+        </div>
+
+        <div id="toast" class="toast"></div>
 
             <script src="/src/js/carrito.js"></script>
     

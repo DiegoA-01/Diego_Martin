@@ -5,12 +5,13 @@
 }
 
 body {
+    height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background: #111;
     color: white;
     background-image: url(/src/assets/deportes.jpg);
+    background-position:center;
     background-size: cover;
-    background-position: center;
 }
 
 nav {
@@ -258,4 +259,183 @@ a:hover {
 .toast.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* IA recomendaciones centradas debajo de los productos */
+#ai-recommendations {
+    width: min(100%, 760px);
+    margin: 30px auto 0;
+    padding: 18px;
+    background: rgba(26, 26, 26, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    text-align: left;
+}
+
+#ai-recommendations h2 {
+    margin-bottom: 14px;
+    color: white;
+    font-size: 18px;
+}
+
+#ai-recommendations input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#ai-recommendations input:focus {
+    border-color: red;
+}
+
+#ai-recommendations button {
+    width: 100%;
+    padding: 10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#ai-recommendations button:hover {
+    background: darkred;
+    transform: scale(1.02);
+}
+
+#ai-recommendations #loading,
+#ai-recommendations #error {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+#ai-recommendations #results {
+    margin-top: 15px;
+    display: grid;
+    gap: 12px;
+}
+
+#ai-recommendations #results .card {
+    padding: 14px;
+    border-radius: 12px;
+    background: #151515;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+#ai-recommendations #results .card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#ai-recommendations #results .card p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+/* Estilos para la sección de recomendaciones con IA */
+.productos {
+    padding: 50px;
+    text-align: center;
+    position: relative;
+}
+
+#ai-recommendations {
+    position: absolute;
+    top: 530px;
+    right: 600px;
+    width: 320px;
+    padding: 20px;
+    background: rgba(26, 26, 26, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    text-align: left;
+    z-index: 10;
+}
+
+#ai-recommendations h2 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+#ai-recommendations input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#ai-recommendations input:focus {
+    border-color: red;
+}
+
+#ai-recommendations button {
+    padding: 12px 25px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#ai-recommendations button:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
+#loading, #error {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#loading {
+    color: #ffa500;
+}
+
+#error {
+    color: #f44336;
+}
+
+#results .card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#results .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+#results .card h3 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+#results .card p {
+    color: #ccc;
 }
